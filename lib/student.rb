@@ -3,9 +3,9 @@ class Student
   attr_accessor :name, :location, :profile_url
   @@all = []
 
-  def initialize(attributes)
-    attributes.each do |key, value|
-      self.send ("#{key}=", value)
+  def initialize(hash)
+    hash.each do |key, value|
+      self.send("#{key}=", value) if self.respond_to?("#{key}=")
     end
     @@all << self
   end
