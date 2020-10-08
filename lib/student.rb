@@ -24,7 +24,7 @@ class Student
     puts attributes_hash
     attributes_hash.each do |key, value|
       self.send("#{key}=", value) if self.respond_to?("#{key}=")
-      puts self
+      puts self.twitter
     end
 
   end
