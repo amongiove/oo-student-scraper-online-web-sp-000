@@ -23,6 +23,7 @@ class Student
   def add_student_attributes(attributes_hash)
     attributes_hash.each do |key, value|
       self.send("#{key}=", value) if self.respond_to?("#{key}=")
+      student["#{key}"] = value
     end
     # binding.pry
   end
