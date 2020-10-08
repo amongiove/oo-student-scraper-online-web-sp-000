@@ -25,7 +25,7 @@ class Student
       self.send("#{key}=", value) if self.respond_to?("#{key}=")
 
     end
-     binding.pry
+    #  binding.pry
   end
 
 end
