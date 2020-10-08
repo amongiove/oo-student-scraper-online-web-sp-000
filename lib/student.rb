@@ -24,7 +24,7 @@ class Student
     Self.new(attributes_hash.each do |key, value|
       self.send("#{key}=", value) if self.respond_to?("#{key}=")
     end)
-    binding.pry
+    # binding.pry
   end
 
 end
