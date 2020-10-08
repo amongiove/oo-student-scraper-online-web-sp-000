@@ -24,7 +24,7 @@ class Student
     attributes_hash.each do |key, value|
       self.send("#{key}=", value) if self.respond_to?("#{key}=")
     end
-    puts self
+    puts self.bio
   end
 
 end
