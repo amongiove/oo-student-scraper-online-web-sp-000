@@ -3,12 +3,13 @@ class Student
   attr_accessor :name, :location, :profile_url
   @@all = []
 
-  def initialize(student={})
-    student = {
-      attributes.each do |attribute|
+  def initialize(attributes)
+    student = {}
+    attributes.each do |attribute|
         |key, value| self.send (("#{key}",value)
-    }
-  end
+        student[key] = value
+    end
+
     @@all << self
   end
 
