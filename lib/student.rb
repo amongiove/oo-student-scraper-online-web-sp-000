@@ -4,7 +4,7 @@ class Student
   @@all = []
 
   def initialize(attributes)
-    attributes.each {|key, value| self.send (("#{key}="), value)}
+    attributes.each {|key, value| self.send (("#{key}="),value)}
     @@all << self
   end
 
