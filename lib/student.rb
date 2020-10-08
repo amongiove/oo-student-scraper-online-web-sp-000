@@ -1,6 +1,6 @@
 class Student
 
-  attr_accessor :name, :location, :profile_url
+  attr_accessor :name, :location, :profile_url, :bio
   @@all = []
 
   def initialize(hash)
