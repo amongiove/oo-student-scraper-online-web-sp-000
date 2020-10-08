@@ -4,6 +4,11 @@ class Student
   @@all = []
 
   def initialize(student={})
+    student = {
+      attributes.each do |attribute|
+        |key, value| self.send (("#{key}",value)
+    }
+  end
     @@all << self
   end
 
